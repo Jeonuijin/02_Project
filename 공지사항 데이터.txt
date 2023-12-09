@@ -1,0 +1,10 @@
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '[연극] 다른 여름 이벤트 당첨자 안내', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '※ 태풍 [카눈]으로 인한 배송지연 안내 ※', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '[인터넷영풍문고] 9월 카드사 무이자 할부 안내', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '[댓글이벤트]  글짓기 이벤트 당첨자 안내', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '※ 폭우로 인한 일부지역 배송지연 안내 ※', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '[서평이벤트] 1%의 노력 서평 이벤트 당첨자 안내', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '[뮤지컬] 베니스의 상인들 이벤트 당첨자 안내', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '세종점 임시휴업 안내 (6/2~)', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '[서평 댓글 이벤트] yp어린이 독서 특공대 이벤트 당첨자 안내', '반갑습니다');
+INSERT INTO NOTICEBOARD (nbidx, type, title, contents) VALUES (NOTICEBOARD_SEQ.NEXTVAL, '이벤트', '[뮤지컬] 어린왕자 이벤트 당첨자 안내');

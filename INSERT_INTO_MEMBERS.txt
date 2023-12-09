@@ -1,0 +1,18 @@
+INSERT INTO  MEMBERS (MEM_ID, MEMPW, NAME, ADDRESS, PHONE, BIRTH, EMAIL, STATEMENT)
+    VALUES ('test1', '123', '홍길동', '서울특별시 강남구 테헤란로 124 4층', '01012341234', '19911111', 'test1@test.com', 'O')
+;
+INSERT INTO  MEMBERS (MEM_ID, MEMPW, NAME, ADDRESS, PHONE, BIRTH, EMAIL, STATEMENT)
+    VALUES ('test2', '456', '강감찬', '서울특별시 강남구 역삼동 823 4층', '01056785678', '19930303', 'test2@test.com', 'O')
+;
+INSERT INTO  MEMBERS (MEM_ID, MEMPW, NAME, ADDRESS, PHONE, BIRTH, EMAIL, STATEMENT)
+    VALUES ('test3', '789', '을지문덕', '서울특별시 영등포구 여의도동 의사당대로 1', '01011111111', '19920728', 'test3@test.com', 'O')
+;
+INSERT INTO  MEMBERS (MEM_ID, MEMPW, NAME, ADDRESS, PHONE, BIRTH, EMAIL, STATEMENT)
+    VALUES ('test4', '339', 'Sam Smith', '부산광역시 부산진구 부전동 112-3 삼한골든게이트 7층', '01087548754', '19970921', 'test4@test.com', 'O')
+;
+INSERT INTO  MEMBERS (MEM_ID, MEMPW, NAME, ADDRESS, PHONE, BIRTH, EMAIL, STATEMENT)
+    VALUES ('test5', '4416', '이순신', '부산광역시 부산진구 동천로 109 삼한골든게이트 7층', '01012341234', '19610505', 'test5@test.com', 'O')
+;
+INSERT INTO  MEMBERS (MEM_ID, MEMPW, NAME, ADDRESS, PHONE, BIRTH, EMAIL, STATEMENT)
+    VALUES ('test6', '7890', '이신순', '서울특별시 영등포구 여의도동 1', '01056137892', '19610505', 'test6@test.com', 'X')
+;
