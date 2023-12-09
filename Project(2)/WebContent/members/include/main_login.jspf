@@ -1,0 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<h1>알라딩 서점</h1>
+<p>환영합니다. ${ loginUser.getName() }님</p>
+<button onclick="main()">메인</button>
+<button onclick="myPage()">마이페이지</button>
+<button onclick="logout()">로그아웃</button>
+<hr>
