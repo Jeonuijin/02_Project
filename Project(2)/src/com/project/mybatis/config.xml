@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias type="com.project.model.vo.BookVO" alias="bookVO" />
+		<typeAlias type="com.project.model.vo.BookReviewVO"
+			alias="BookReviewVO" />
+		<typeAlias alias="MembersVO"
+			type="com.project.model.vo.MembersVO" />
+		<typeAlias type="com.project.model.vo.NoticeBoardVO"
+			alias="NoticeBoardVO" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@localhost:1521:xe" />
+				<property name="username" value="PROJECT2" />
+				<property name="password" value="projectpw" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="com/project/mybatis/mapperProduct.xml" />
+		<mapper resource="com/project/mybatis/mapperMember.xml" />
+		<mapper resource="com/project/mybatis/mapperProject.xml" />
+		<mapper resource="com/project/mybatis/loginMapper.xml" />
+		<mapper resource="com/project/mybatis/NoticeMapper.xml" />
+	</mappers>
+
+</configuration>
+
+
+

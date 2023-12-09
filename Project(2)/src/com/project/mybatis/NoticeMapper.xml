@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="NOTICEBOARD">
+	
+	<!-- 게시글 작성 -->
+	<insert id="insert" parameterType="NoticeBoardVO">
+		INSERT INTO NOTICEBOARD
+		(nbIdx, type, title, contents, createdat)
+		VALUES
+		(NOTICEBOARD_SEQ.NEXTVAL, #{type}, #{title}, #{contents}, SYSDATE)
+	</insert>
+	
+	<!-- 전체 게시글 목록 조회 -->
+	<select id="list" resultType="com.project.model.vo.NoticeBoardVO">
+		SELECT RNUM, NBIDX, type, title, createDat, CONTENTS
+			FROM (
+			  SELECT ROWNUM AS RNUM, B.*
+			  FROM (
+			    SELECT *
+			    FROM NOTICEBOARD
+			    ORDER BY NBIDX ASC
+			  ) B
+			) ORDER BY RNUM DESC
+	</select>
+	
+	<!-- 게시글 1개 조회 -->
+ 	<select id = "one" resultType = "com.project.model.vo.NoticeBoardVO" parameterType="int">
+ 	SELECT * FROM NOTICEBOARD
+	WHERE NBIDX = #{nbIdx}
+ 	</select>
+	
+	<!-- 게시글 수정 -->
+	<update id = "upd" parameterType="NoticeBoardVO">
+	UPDATE NOTICEBOARD
+	SET 
+	TYPE = #{type},
+	TITLE = #{title},
+	CONTENTS = #{contents}
+	WHERE NBIDX = #{nbIdx}
+	
+	</update>
+	
+	<!-- 게시글 1개 삭제 -->
+	<delete id = "del" parameterType="int">
+	DELETE FROM NOTICEBOARD
+	WHERE NBIDX = #{nbIdx}
+	</delete>
+	
+	<!-- 페이지에 해당하는 게시글 조회 -->
+	<!--<select id="paging" resultType="com.project.model.vo.PagingVO"
+			parameterType="map">
+		SELECT * 
+		  FROM (SELECT ROWNUM AS RNUM, B.*
+		          FROM (SELECT *
+		                FROM NOTICEBOARD
+		                ORDER BY NOTICEBOARD_IDX DESC) B
+		        )
+		WHERE RNUM BETWEEN #{begin} AND #{end}
+	</select>-->
+	
+		<!-- 전체 게시글 건수 조회 -->
+	<select id="totalCount" resultType="int">
+		SELECT COUNT(*) AS CNT FROM NOTICEBOARD
+	</select>
+
+</mapper>
